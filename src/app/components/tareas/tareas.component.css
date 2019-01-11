@@ -1,0 +1,257 @@
+h1,
+p {
+    text-align: left;
+    color: #fff;
+    font-family: 'Open Sans';
+}
+
+p {
+    width: 100%;
+    margin-top: 1%;
+    background-color: #ffffff;
+}
+
+.contain {
+    width: 100%;
+    align-content: center;
+    position: center;
+    margin-left: 10%;
+}
+
+.row {
+    overflow: auto;
+    width: 100%;
+}
+
+.row::-webkit-scrollbar {
+    width: 1px;
+}
+
+.row::-webkit-scrollbar-thumb {
+    background: #f13506;
+    border-radius: 1px;
+}
+
+.row__inner {
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+    font-size: 0;
+    white-space: nowrap;
+    margin: 70.3125px 0;
+    padding-top: 10PX;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.tile {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 140.625px;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 450ms all;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+
+.tile__img {
+    width: 250px;
+    height: 140.625px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.tile__details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+    opacity: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    transition: 450ms opacity;
+}
+
+.tile__details:after,
+.tile__details:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: #000;
+}
+
+.tile__details:after {
+    margin-top: -25px;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #ecf0f1;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.tile__details:before {
+    content: '▶';
+    left: 0;
+    width: 100%;
+    font-size: 30px;
+    margin-left: 7px;
+    margin-top: -18px;
+    text-align: center;
+    z-index: 2;
+}
+
+.tile:hover .tile__details {
+    opacity: 1;
+}
+
+.tile__title {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+
+.row__inner:hover {
+    -webkit-transform: translate3d(-62.5px, 0, 0);
+    transform: translate3d(-62.5px, 0, 0);
+}
+
+.row__inner:hover .tile {
+    opacity: 0.3;
+}
+
+.row__inner:hover .tile:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.tile:hover~.tile {
+    -webkit-transform: translate3d(125px, 0, 0);
+    transform: translate3d(125px, 0, 0);
+}
+
+nav {
+    background-color: #eeeeee;
+}
+
+.opcion {
+    margin-bottom: 5px;
+}
+
+.divider {
+    border: solid 0.5px #c6c6c6;
+}
+
+.opcion:hover {
+    background-color: #eeeeee;
+}
+
+.esquina {
+    border: none;
+    background-color: #eeeeee;
+}
+
+.user {
+    color: #fe4918;
+}
+
+.user:hover {
+    color: #ff2700;
+    cursor: pointer;
+}
+
+.usuario {
+    margin-right: 80px;
+}
+
+ul.lista-precios>li {
+    padding: 10px;
+    float: left;
+    width: 25%;
+}
+
+div.tabla-precio {
+    border: 1px solid #e1e1e1;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 40px 0;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+div.tabla-precio ul li {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #868686;
+    line-height: 26px;
+}
+
+div.tabla-precio ul li i {
+    color: green;
+    size: 2em;
+    margin-right: 8px;
+}
+
+div.tabla-precio:hover {
+    transform: scale(1.2);
+    border: 1px solid #fe4918;
+    box-shadow: 0px 0px 50px #666;
+    transition: all .3s ease;
+}
+
+div.tabla-precio h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+div.tabla-precio p.numero {
+    color: #000;
+    margin: 20px 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.boton {
+    padding: 10px;
+    background-color: #fe4918;
+    border-radius: 20px;
+}
+
+a.boton {
+    text-decoration: none;
+    color: white;
+}
+
+h4::after {
+    content: '';
+    margin: 0 auto;
+    background-image: url(../../../assets/separador.png);
+    height: 30px;
+    width: 100px;
+    display: block;
+}
+
+.seccion {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.numero i {
+    font-size: 2.5rem;
+}

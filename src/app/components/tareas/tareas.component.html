@@ -1,0 +1,62 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><span class="titulo">GoNSA2</span> </a>
+        </div>
+        <div class="usuario btn-group">
+            <button type="button" class="esquina" data-toggle="dropdown">
+      <i class="user fas fa-user"></i></button>
+
+            <ul class="dropdown-menu" role="menu">
+                <li class="opcion"><a href="#">Perfil</a></li>
+                <li class="opcion"><a href="#">Ayuda</a></li>
+                <li class="divider"></li>
+                <li class="opcion"><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="row__inner align-items-center">
+
+            <div *ngFor="let tarea of tareas; let i=index" class="tile card text-white bg-primary mb-3 text-center">
+                <div class="tile__media card-header">{{tarea.info}}
+                    <div class="card-body">
+                        <div class="card-text">{{tarea.titulo}}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="row__inner justify-content-center align-items-center">
+
+            <div *ngFor="let tarea of tareasResueltas" class="tile card text-white bg-danger mb-3 text-center">
+                <div class="tile__media card-header">{{tarea.info}}
+                    <div class="card-body">
+                        <div class="card-text">{{tarea.titulo}}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="row__inner">
+
+            <div *ngFor="let tarea of tareas" class="tile card text-white bg-warning mb-3 text-center">
+                <div class="tile__media card-header">{{tarea.info}}
+                    <div class="card-body">
+                        <div class="card-text">{{tarea.titulo}}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
