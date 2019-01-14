@@ -16,6 +16,9 @@ import { ProfesorComponent } from './components/profesor/profesor.component';
 import { DesafioComponent } from './components/desafios/desafios.component';
 import { TareasComponent } from './components/tareas/tareas.component';
 
+import { CategoriaService} from './services/categoria.service';
+import { TareaService } from './services/tarea.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,10 @@ import { TareasComponent } from './components/tareas/tareas.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    TareaService,
+    CategoriaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
